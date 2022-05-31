@@ -11,12 +11,16 @@ namespace Archivos
     {
         static void Main(string[] args)
         {
-            StreamWriter sw = new StreamWriter("ejemplo.txt",true);
-            string[] lineas =
-            {
-                "Esta es la nueva escritura",
-                "Fin txt"
-            };
+            string[] lineas = new string[5];
+            int opc=0;
+            StreamWriter sw = new StreamWriter("ejemplo.txt", true);
+            do { 
+               
+            Console.WriteLine("Ingresa un nombre");
+                lineas[opc] = Console.ReadLine();
+            
+                opc++;
+        }while (opc!=5) ;
             foreach (string line in lineas)
             {
                 sw.WriteLine(line);
